@@ -2,7 +2,7 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
   <?php
@@ -15,8 +15,12 @@ $url_ev = "data/events.json";
 $json_ev = file_get_contents($url_ev);
 $json_ev = json_decode($json_ev, true);
 $Ev_Array = $json_ev;   
-  ?>
   
+
+
+  
+  ?>
+
 
 </head>
 
@@ -24,12 +28,19 @@ $Ev_Array = $json_ev;
   <div class="row">
     <div class="col-md-8 left-col">
       <div class="page_header">Articles</div>
-      <?php foreach ($Art_Array as $key => $value) {
+      <?php 
+      function trim_words($text) {
+    	return preg_replace('/((\w+\W*){15}(\w+))(.*)/', '${1}', $text);	
+    }
+    
+      foreach ($Art_Array as $key => $value) {
+      $text =  $value[content];
+                
     echo 
       '<div class="col-md-6 art_block">
-       <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
-       <div class="image"><a href="' . $value[url] . '" target= "_blank">' . '<img src="' . $value[image] . '"/>' . '</a></div>
-       <div class="description">' .  wordwrap(($value[content]), 100, " <span style='display:none;'> ")  .'</span></div>
+      <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
+      <div class="image"><a href="' . $value[url] . '" target= "_blank">' . '<img src="' . $value[image] . '"/>' . '</a></div>
+       <div class="description">' . (trim_words($text)) . ' <a href="' . $value[url] . '" target= "_blank">Read more &raquo; </a></div>
        </div>
       ';
   }
