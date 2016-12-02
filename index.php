@@ -15,17 +15,6 @@ $url_ev = "data/events.json";
 $json_ev = file_get_contents($url_ev);
 $json_ev = json_decode($json_ev, true);
 $Ev_Array = $json_ev;   
-  
-$description = $value[content];
-
-    function trim_words($text) {
-    	return preg_replace('/((\w+\W*){5}(\w+))(.*)/', '${1}', $text);	
-    }
-    
-$text = "How can I truncate a string to the first 20 words in PHP?";
- 
-   
-   echo $sort_desc;
   ?>
   
 
