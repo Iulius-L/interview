@@ -95,3 +95,7 @@
     font-size: 16px;
     display: block;
   }
+
+ .readmore, .readmore:hover {
+   color: #8a8d08;
+}
