@@ -1,1 +1,97 @@
-
+  .page {
+    max-width: 1230px;
+    background: #f8f8f8;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .page_header {
+    color: #ffffff;
+    background: #8a8d08;
+    font-size: 25px;
+    display: block;
+    height: 50px;
+    padding: 8px 30px;
+    margin-bottom: 18px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .left-col {
+    background: #ffffff;
+    padding-left: 30px;
+  }
+  
+  .art_block {
+    display: block;
+    float: left;
+    margin-bottom: 28px;
+    min-height: 390px;
+  }
+  
+  .title {
+    color: #000000;
+    border-top: 4px solid #8a8d08;
+    border-bottom: 4px solid #8a8d08;
+    padding: 8px;
+    padding-left: 15px;
+    font-size: 18px;
+    display: block;
+    height: 47px;
+    font-weight: bold;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+  }
+  
+  .description {
+    font-size: 16px;
+    display: block;
+    height: 90px;
+    max-height: 90px;
+    overflow: hidden;
+    padding: 15px;
+    border-left: 2px solid #e7e7e7;
+    border-right: 2px solid #e7e7e7;
+    border-bottom: 5px solid #f2f2f2;
+    background-color: #ffffff;
+  }
+  
+  .header_ev_section {
+    color: #000000;
+    font-size: 25px;
+    display: block;
+    min-height: 50px;
+    padding: 8px 15px;
+    margin-bottom: 18px;
+  }
+  
+  .block_ev {
+    background: #ffffff;
+    padding: 20px;
+    padding-left: 30px;
+    margin-bottom: 28px;
+    border-bottom: 3px solid #ebebeb;
+  }
+  
+  .title_ev_block {
+    color: #8a8d08;
+    background: #ffffff;
+    font-size: 18px;
+    display: block;
+  }
+  
+  .desc_ev {
+    color: #000000;
+    background: #ffffff;
+    font-size: 16px;
+    display: block;
+  }
