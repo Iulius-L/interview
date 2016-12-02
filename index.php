@@ -32,7 +32,7 @@ $Ev_Array = $json_ev;
       '<div class="col-md-6 art_block">
       <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
       <div class="image"><a href="' . $value[url] . '" target= "_blank">' . '<img src="' . $value[image] . '"/>' . '</a></div>
-       <div class="description">' . (trim_words($text)) . ' <a href="' . $value[url] . '" target= "_blank">Read more &raquo; </a></div>
+       <div class="description">' . (trim_words($text)) . '...  <a href="' . $value[url] . '" target= "_blank" class="readmore">Read more &raquo; </a></div>
        </div>
       ';
   }
