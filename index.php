@@ -27,11 +27,10 @@ $Ev_Array = $json_ev;
       <?php foreach ($Art_Array as $key => $value) {
     echo 
       '<div class="col-md-6 art_block">
-      <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
-      <div class="image"><a href="' . $value[url] . '" target= "_blank">' . '<img src="' . $value[image] . '"/>' . '</a></div>
+       <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
+       <div class="image"><a href="' . $value[url] . '" target= "_blank">' . '<img src="' . $value[image] . '"/>' . '</a></div>
        <div class="description">' .  wordwrap(($value[content]), 100, " <span style='display:none;'> ")  .'</span></div>
-       <div class="description">' .  wordwrap(($value[content]), 100, " <span style='display:none;'> ")  .'</span></div>
-      </div>
+       </div>
       ';
   }
 ?>
