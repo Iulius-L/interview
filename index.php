@@ -15,13 +15,7 @@ $url_ev = "data/events.json";
 $json_ev = file_get_contents($url_ev);
 $json_ev = json_decode($json_ev, true);
 $Ev_Array = $json_ev;   
-  
-
-
-  
   ?>
-
-
 </head>
 
 <body class="page">
@@ -31,11 +25,9 @@ $Ev_Array = $json_ev;
       <?php 
       function trim_words($text) {
     	return preg_replace('/((\w+\W*){15}(\w+))(.*)/', '${1}', $text);	
-    }
-    
+    }    
       foreach ($Art_Array as $key => $value) {
-      $text =  $value[content];
-                
+      $text =  $value[content];                
     echo 
       '<div class="col-md-6 art_block">
       <div class="title">' . wordwrap(($value[title]), 36, " <span style='display:none;'> ")  .'</span></div>
